@@ -1,6 +1,6 @@
 # flutter_tipping_calculator
 
-A new Flutter project.
+This is the code to start from in the App development manual.
 
 ## Getting Started
 
