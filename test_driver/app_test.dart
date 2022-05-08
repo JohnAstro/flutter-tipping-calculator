@@ -3,13 +3,11 @@ import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('Homebrew Dripper App', () {
-    // First, define the Finders and use them to locate widgets from the
-    // test suite. Note: the Strings provided to the `byValueKey` method must
-    // be the same as the Strings we used for the Keys in step 1.
-    final coffeeRecipesTextFinder = find.byValueKey('coffee-recipes');
-
+  group('Tipping Calculator App', () {
     FlutterDriver driver;
+
+    // Counter number finder
+    final counterNumberFinder = find.byValueKey('counter-num-text');
 
     // Connect to the Flutter driver before running any tests.
     setUpAll(() async {
@@ -23,9 +21,9 @@ void main() {
       }
     });
 
-    test('starts at 0', () async {
-      // Use the `driver.getText` method to verify the counter starts at 0.
-      expect(await driver.getText(coffeeRecipesTextFinder), "Coffee Recipes");
+    test('counter is at 0 at the start of the app', () async {
+      // Expect the counter number to be '0'
+      expect(await driver.getText(counterNumberFinder), '0');
     });
   });
 }
